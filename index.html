@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemo's Personal Site</title>
+    <!-- 引入思源宋体（Google Fonts） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 字体图标（优化导航与标题） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 固定导航栏（快速跳转链接） -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#profile" class="nav-link"><i class="fa fa-user"></i> 个人介绍</a>
+            <a href="#music" class="nav-link"><i class="fa fa-music"></i> 音乐偏好</a>
+            <a href="#movie" class="nav-link"><i class="fa fa-film"></i> 电影清单</a>
+        </div>
+    </nav>
+
+    <!-- 背景图（第三张风景照） -->
+    <div class="bg-container"></div>
+
+    <!-- 页面主体 -->
+    <div class="main-container">
+        <!-- 1. 个人介绍（锚点：profile） -->
+        <section id="profile" class="profile-section">
+            <div class="profile-card">
+                <img src="assets/images/profile.jpg" alt="个人照片" class="profile-img">
+                <div class="profile-info">
+                    <h1 class="profile-name">Nemo</h1>
+                    <p class="profile-desc">我们都不是白色的</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 音乐区域（锚点：music，含专辑照） -->
+        <section id="music" class="music-section">
+            <h2 class="section-title"><i class="fa fa-music"></i> 音乐偏好</h2>
+            
+            <!-- 音乐风格 -->
+            <div class="music-style">
+                <h3 class="sub-title">喜欢的风格</h3>
+                <div class="style-tags">
+                    <span class="tag">摇滚</span>
+                    <span class="tag">爵士</span>
+                    <span class="tag">R&B</span>
+                    <span class="tag">放克</span>
+                    <span class="tag">灵魂乐</span>
+                </div>
+            </div>
+
+            <!-- 乐评（带专辑照，随机显示1条） -->
+            <div class="music-review">
+                <h3 class="sub-title">我的乐评</h3>
+                <div id="random-review" class="review-card">
+                    <!-- JS动态插入：专辑照+评论文字 -->
+                </div>
+                <!-- 乐评数据源（含专辑照路径） -->
+                <div class="review-list hidden">
+                    <div class="review-item">
+                        <img src="assets/images/album/huaqiang-yuzhen.jpg" alt="《余震》专辑照" class="review-img">
+                        <p class="review-text">《余震》- 花墙乐队：旋律里藏着未散的情绪，鼓点像心跳般叩击神经，收尾的吉他solo把“余震”的余韵拉到最长。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/huaqiang-namas.jpg" alt="《NAMAS》专辑照" class="review-img">
+                        <p class="review-text">《NAMAS》- 花墙乐队：迷幻的编曲包裹着温柔的人声，仿佛在深夜的房间里听一场私人演出，每个音符都在低语。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/deca-yushi.jpg" alt="《浴室》专辑照" class="review-img">
+                        <p class="review-text">《浴室》- deca joins：慵懒的吉他前奏一出来就自带画面感，歌词里的“潮湿”感透过声音漫出来，适合独处时循环。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/deca-only.jpg" alt="《only only》专辑照" class="review-img">
+                        <p class="review-text">《only only》- deca joins：简单的旋律却有极强的感染力，主唱的声线带着点沙哑的温柔，“only you”的重复让人忍不住跟着轻唱。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/yean-jingsan.jpg" alt="《惊散的鸟群》专辑照" class="review-img">
+                        <p class="review-text">《惊散的鸟群》- 野岸刊：歌词像一首短诗，乐器编排克制却有力，结尾的留白让人想起突然散开的鸟群，空留怅然。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/yean-xinghuo.jpg" alt="《当星火殆尽》专辑照" class="review-img">
+                        <p class="review-text">《当星火殆尽》- 野岸刊：从平缓到爆发的过渡很惊艳，“星火”的隐喻贯穿始终，熄灭时的钢琴音像最后一点光的余温。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/wangwen-21.jpg" alt="《21世纪不适症》专辑照" class="review-img">
+                        <p class="review-text">《21世纪不适症》- 惘闻：instrumental的魅力在此刻拉满，厚重的音墙裹着焦虑与迷茫，精准戳中当代人的“不适”。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/jiangwenhui.jpg" alt="《山坡上的文慧》专辑照" class="review-img">
+                        <p class="review-text">《山坡上的文慧》- 蒋先贵：方言与旋律的融合很妙，“山坡上”的场景感极强，像听一个关于回忆的小故事，亲切又遥远。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/dog-womb.jpg" alt="《womb of trinity》专辑照" class="review-img">
+                        <p class="review-text">《womb of trinity》- 小狗的骨头：实验性的编曲很有新意，声音层次丰富，仿佛在探索一个神秘的声音空间。</p>
+                    </div>
+                    <div class="review-item">
+                        <img src="assets/images/album/dog-tianshi.jpg" alt="《哦！天使》专辑照" class="review-img">
+                        <p class="review-text">《哦！天使》- 小狗的骨头：轻快的节奏带着治愈感，“天使”的意象很温暖，适合心情低落时用来“充电”。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 电影区域（锚点：movie，含海报） -->
+        <section id="movie" class="movie-section">
+            <h2 class="section-title"><i class="fa fa-film"></i> 电影清单</h2>
+            
+            <!-- 电影列表（带海报） -->
+            <div class="movie-list">
+                <div class="movie-card">
+                    <img src="assets/images/poster/daydreamer.jpg" alt="《白日梦想家》海报" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">白日梦想家</h3>
+                        <p class="movie-tagline">“开拓视野，冲破艰险，看见世界，身临其境，贴近彼此，感受生活，这就是生活的目的。”</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="assets/images/poster/deadpoets.jpg" alt="《死亡诗社》海报" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">死亡诗社</h3>
+                        <p class="movie-tagline">“船长，我的船长！”—— 自由与诗意的觉醒，永远能打动渴望突破束缚的心。</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="assets/images/poster/soul.jpg" alt="《心灵奇旅》海报" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">心灵奇旅</h3>
+                        <p class="movie-tagline">不是所有灵魂都需要“伟大目标”，感受风吹过树叶、咬一口披萨的瞬间，就是生命的意义。</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="assets/images/poster/greatestshowman.jpg" alt="《马戏之王》海报" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">马戏之王</h3>
+                        <p class="movie-tagline">“平凡的人也能创造奇迹”，歌舞与故事的结合充满力量，每个“异类”都在闪耀自己的光。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 随机观后感 -->
+            <div class="movie-thought">
+                <h3 class="sub-title">观后随想</h3>
+                <div id="random-thought" class="thought-content"></div>
+                <div class="thought-list hidden">
+                    <p>看《白日梦想家》时，最难忘沃尔特从飞机上跳下的瞬间——我们太多人困在“想象”里，却忘了迈出第一步的勇气。</p>
+                    <p>《死亡诗社》的结局让我哭了很久，“船长，我的船长”不仅是对老师的致敬，更是对“不被定义”的青春的坚持。</p>
+                    <p>《心灵奇旅》里的“22号”让我明白：生命不是“完成任务”，而是“体验过程”，哪怕只是抬头看看天空。</p>
+                    <p>《马戏之王》的歌舞太有感染力了！每个角色都在说“我很美”，这种接纳自己、拥抱不同的态度，比剧情更打动我。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="site-footer">
+            <p>© 2025 Nemo's Site | Hosted on GitHub Pages</p>
+        </footer>
+    </div>
+
+    <!-- JS：随机内容+导航交互 -->
+    <script>
+        // 1. 随机显示乐评（含专辑照）
+        function getRandomReview() {
+            const reviews = document.querySelectorAll('.review-item');
+            const randomIndex = Math.floor(Math.random() * reviews.length);
+            const randomReview = reviews[randomIndex].cloneNode(true);
+            randomReview.classList.remove('hidden');
+            document.getElementById('random-review').innerHTML = '';
+            document.getElementById('random-review').appendChild(randomReview);
+        }
+
+        // 2. 随机显示观后感
+        function getRandomThought() {
+            const thoughts = document.querySelectorAll('.thought-list p');
+            const randomIndex = Math.floor(Math.random() * thoughts.length);
+            document.getElementById('random-thought').innerText = thoughts[randomIndex].innerText;
+        }
+
+        // 3. 导航栏滚动效果（滚动时添加阴影）
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // 4. 页面加载时执行
+        window.onload = function() {
+            getRandomReview();
+            getRandomThought();
+            // 30秒刷新一次随机内容
+            setInterval(() => {
+                getRandomReview();
+                getRandomThought();
+            }, 30000);
+        };
+    </script>
+</body>
+</html>
